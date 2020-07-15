@@ -1,20 +1,92 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    
+    <ion-title>Accueil - wakhart</ion-title>
   </ion-toolbar>
+  
+ 
+<title></title>
+
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+<ion-content>
+  <div class="padding">
+    
+      <div class="logo">
+        <img src="http://www.wakhart.com/wp-content/uploads/2019/12/wakh_art.png"  />
+    </div>
   </div>
+
+  <ion-content>
+
+    <ion-grid>
+        <ion-row>
+          <ion-col col-md-6>
+              <ion-card (click)=artpalstique() >
+                  <ion-img src="https://designmag.fr/wp-content/uploads/crayons-couleur-fondus-forme-c%C5%93ur.jpg"></ion-img>
+                  <ion-card-content>
+                    <ion-card-header>
+                      <ion-card-subtitle>Art Plastique</ion-card-subtitle>
+                    </ion-card-header>
+                  </ion-card-content>
+                </ion-card>
+                </ion-col>
+                <ion-col col-md-6>
+                    <ion-card (click)="cinema()">
+                        <ion-img src="https://designmag.fr/wp-content/uploads/crayons-couleur-fondus-forme-c%C5%93ur.jpg"></ion-img>
+                        <ion-card-content>
+                          <ion-card-header>
+                            <ion-card-subtitle>Cinema</ion-card-subtitle>
+                          </ion-card-header>
+                        </ion-card-content>
+                      </ion-card>
+                  </ion-col>
+              </ion-row>
+              <ion-row>
+                  <ion-col col-md-6>
+                      <ion-card (click)="dance()">
+                          <ion-img src="https://designmag.fr/wp-content/uploads/crayons-couleur-fondus-forme-c%C5%93ur.jpg"></ion-img>
+                          <ion-card-content>
+                            <ion-card-header>
+                              <ion-card-subtitle>Dance</ion-card-subtitle>
+                            </ion-card-header>
+                          </ion-card-content>
+                        </ion-card>
+                        </ion-col>
+                        <ion-col col-md-6>
+                            <ion-card (click)="literrature()">
+                                <ion-img src="https://designmag.fr/wp-content/uploads/crayons-couleur-fondus-forme-c%C5%93ur.jpg"></ion-img>
+                                <ion-card-content>
+                                  <ion-card-header>
+                                    <ion-card-subtitle>Litterature</ion-card-subtitle>
+                                  </ion-card-header>
+                                </ion-card-content>
+                              </ion-card>
+                          </ion-col>
+                      </ion-row>
+            </ion-grid>
+
+            
+</ion-content>
+<ion-item>
+    <ion-tabs>
+        <ion-tab-bar slot="bottom,top">
+          <ion-tab-button (click)="cinema()">
+            <ion-icon name="flash"></ion-icon>
+            <ion-label>Tab One</ion-label>
+          </ion-tab-button>
+          <ion-tab-button (click)="acceuil()">
+            <ion-icon name="apps"></ion-icon>
+            <ion-label>Tab Two</ion-label>
+          </ion-tab-button>
+          <ion-tab-button tab="tab3">
+            <ion-icon name="send"></ion-icon>
+            <ion-label>Tab Three</ion-label>
+          </ion-tab-button>
+        </ion-tab-bar>
+      </ion-tabs>
+</ion-item>
+  
+  
+
 </ion-content>

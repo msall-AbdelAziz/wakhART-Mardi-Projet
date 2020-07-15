@@ -1,0 +1,70 @@
+
+  
+
+<ion-content >
+
+<div class="padding">
+
+  <div class="logo">
+    <img src="http://www.wakhart.com/wp-content/uploads/2019/12/wakh_art.png"  />
+  </div>
+
+  <!-- À afficher si l'utilisateur n'est pas connecté 
+  <div *ngIf="!connected"></div> -->
+
+  <ion-list lines="none">
+      <form [formGroup]="loginForm">
+        <ion-item>
+          <ion-label color="light">Email : </ion-label>
+          <ion-input color="light" type="email" formControlName="email" placeholder="Adresse Email"></ion-input>
+        </ion-item>
+      
+        <ion-item>
+          <ion-label color="light">Password : </ion-label>
+          <ion-input color="light" type="password" formControlName="password" placeholder="Mot de passe" ></ion-input>
+        </ion-item>
+      
+        <ion-item lines="none">
+          <ion-button color="light" fill="clear" slot="end">Mot de passe oublier</ion-button>
+        </ion-item> 
+        
+        <ion-button expand="block" (click)="login()">login</ion-button>
+        <!--<ion-button (click)="login()" color="light" fill="outline" shape="round" expand="block">Connexion</ion-button>-->
+        <ion-button color="dark" fill="solid" shape="round" expand="block" [routerDirection]="'forward'" [routerLink]="['/signup']">S'inscrire</ion-button>
+        <br>
+      
+        <!--<ion-button (click)="signUp()" shape="round" expand="block">Inscription</ion-button>-->
+        <ion-item lines="none">
+          <ion-label text-center color="light"> Ou connectez-vous avec : </ion-label>
+        </ion-item>
+    
+        <div class="flex" color="facebook">
+            <ion-button shape="round">
+              <ion-icon slot="start" name="logo-facebook"></ion-icon>
+              Facebook
+            </ion-button>
+      
+            <ion-button shape="round" color="google">
+              <ion-icon slot="start" name="logo-google"></ion-icon>
+              Google
+            </ion-button>
+        </div>
+    
+      </form>
+  </ion-list>
+    <!--<ion-button (click)="add()">Ajouter</ion-button> 
+  </div>-->
+
+  <!-- Si l'utilisateur est connecté -->
+  <div *ngIf="connected">
+    <H1>Vous êtes bien connecté </H1> 
+    <br>
+   <!-- <ion-button (click)="logout()" color="danger" fill="outline" shape="round" expand="block">Déconnexion</ion-button> -->
+    
+  </div>
+  
+
+</div>
+
+
+</ion-content>
